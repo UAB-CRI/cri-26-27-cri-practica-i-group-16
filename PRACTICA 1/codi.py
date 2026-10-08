@@ -22,7 +22,7 @@ def actualitzarDominis(espais, matriu, dicP, visitats, paraula):
                     break
 
         if buit:
-            # Comprovem cada paraula de l'allargada del forat que no estigui ja a la solució
+            # Comprovem cada paraula de l'llargada del forat que no estigui ja a la solució
             for p in dicP[forat[2]]:
                 if p not in visitats and p != paraula:
                     i = 0
@@ -58,12 +58,12 @@ def backtracking(espais, index, matriu, visitats):
     # Assignem la informació de l'espai
     direccio = espais[index][0]  # Tindrem 'H' = horitzontal i 'V' = vertical
     x = espais[index][1]  # Fila on comença l'espai
-    allargada = espais[index][2]  # longitud de l'espai = nombre de lletres
+    llargada = espais[index][2]  # longitud de l'espai = nombre de lletres
     y = espais[index][3]  # Columna on comença l'espai
 
     # Comprovem si el diccionari té paraules amb aquesta longitud
-    if allargada in dicP:
-        for p in dicP[allargada]:
+    if llargada in dicP:
+        for p in dicP[llargada]:
             # Si n'hi ha ens assegurem de no fer servir una paraula que ja està posada al tauler
             if p not in visitats:
                 if direccio == 'H':
